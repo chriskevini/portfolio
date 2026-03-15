@@ -906,27 +906,29 @@ ul { list-style: none; }
   .spread-title { font-size: 2rem; }
   .nav-link { font-size: 0.85rem; }
   .hero-kana-name { font-size: 1rem; }
-  
-  /* Display screenshots 2 columns side-by-side on mobile */
-  .spread-screenshots {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0.5rem;
-  }
-  .spread-screenshot--main {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .spread-screenshots-secondary {
-    grid-column: 2;
-    grid-row: 1;
-    flex-direction: column;
-  }
-  
-  /* Keep single screenshots full width on mobile */
-  .spread-screenshots--single {
-    grid-template-columns: 1fr;
-  }
+   
+   /* Display screenshots 2 columns side-by-side on mobile */
+   .spread-screenshots {
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: auto;
+     gap: 0.5rem;
+     aspect-ratio: 1;
+   }
+   .spread-screenshot--main {
+     grid-column: 1;
+     grid-row: 1;
+   }
+   .spread-screenshots-secondary {
+     grid-column: 2;
+     grid-row: 1;
+     flex-direction: column;
+   }
+   
+   /* Keep single screenshots full width on mobile */
+   .spread-screenshots--single {
+     grid-template-columns: 1fr;
+     aspect-ratio: unset;
+   }
 }
 
 /* ── Reduced motion ── */
