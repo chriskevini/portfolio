@@ -891,6 +891,11 @@ ul { list-style: none; }
     grid-row: 1;
     flex-direction: column;
   }
+  
+  /* Keep single screenshots full width on mobile */
+  .spread-screenshots--single {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── Reduced motion ── */
