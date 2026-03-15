@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chris Irineo — Software developer. Selected works.">
+  <meta name="theme-color" content="#faf8f4">
+  <title>クリス・イリネオ — Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="paper-texture" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <!-- Logo image -->
+    <a href="#home" class="nav-logo" aria-label="クリス・イリネオ — home">
+      <img src="../kurisu ci.png" alt="クリス・イリネオ" class="nav-logo-img">
+    </a>
+
+    <!-- Text links: kanji + English beneath -->
+    <div class="nav-center">
+      <ul class="nav-links" role="list">
+        <li>
+          <a href="#work" class="nav-link" data-section="work">
+            <span class="nav-link-jp">Works</span>
+            <span class="nav-link-en">制作実績</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link" data-section="about">
+            <span class="nav-link-jp">About</span>
+            <span class="nav-link-en">自己紹介</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link" data-section="contact">
+            <span class="nav-link-jp">Contact</span>
+            <span class="nav-link-en">連絡先</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+
+    <!-- Large background kanji decoration -->
+    <div class="hero-bg-kanji" aria-hidden="true">
+      <span class="bg-kanji bg-kanji--1">創</span>
+      <span class="bg-kanji bg-kanji--2">作</span>
+    </div>
+
+    <div class="hero-issue">
+      <span class="issue-label">Portfolio</span>
+      <span class="issue-sep">&nbsp;&bull;&nbsp;</span>
+      <span class="issue-num">No.&thinsp;01</span>
+      <span class="issue-sep">&nbsp;&bull;&nbsp;</span>
+      <span class="issue-year">2026</span>
+    </div>
+
+    <div class="hero-body">
+      <!-- Vertical Japanese text — always visible -->
+      <div class="hero-left">
+        <div class="hero-vtext">ソフトウェア・エンジニア</div>
+      </div>
+
+      <div class="hero-center">
+        <p class="hero-eyebrow">The works of</p>
+
+        <!-- Name with brush-stroke clip reveal -->
+        <h1 class="hero-name">
+          <span class="hero-name-line">Chris</span>
+          <span class="hero-name-line hero-name-line--indent">Irineo</span>
+        </h1>
+
+        <!-- Katakana name beneath -->
+        <p class="hero-kana-name" aria-label="Kurisu Irineо">クリス・イリネオ</p>
+
+        <p class="hero-desc">
+          A curated collection of software<br>
+          built at the intersection of <em>craft</em> and <em>curiosity</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Explore indicator — bottom center -->
+    <a href="#work" class="hero-explore">
+      <span>Explore</span>
+      <svg viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="1" y="1" width="22" height="36" rx="11"/>
+        <circle class="scroll-dot" cx="12" cy="10" r="3" fill="currentColor"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- Work -->
+  <section id="work" class="work">
+    <header class="work-header">
+      <div class="work-header-rule"></div>
+      <h2 class="work-header-title">Works&ensp;／&ensp;制作実績</h2>
+      <div class="work-header-rule"></div>
+    </header>
+
+    <!-- Sir Hires -->
+    <article class="spread reveal">
+      <div class="spread-fig">
+        <div class="spread-frame">
+          <div class="spread-art">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="5" y="10" width="110" height="72" rx="6" stroke-dasharray="5 3"/>
+              <rect x="20" y="4" width="80" height="82" rx="3"/>
+              <circle cx="60" cy="50" r="16" stroke-dasharray="3 3"/>
+              <line x1="44" y1="50" x2="76" y2="50"/>
+              <line x1="60" y1="34" x2="60" y2="66"/>
+              <circle cx="60" cy="50" r="4" fill="currentColor" opacity=".3"/>
+            </svg>
+          </div>
+          <span class="spread-figcaption">Fig.&thinsp;01 &mdash; Sir Hires</span>
+          <!-- Japanese accent label -->
+          <span class="spread-jp-label" aria-hidden="true">拡張機能</span>
+        </div>
+      </div>
+      <div class="spread-text">
+        <h3 class="spread-title">Sir Hires</h3>
+        <p class="spread-title-jp" aria-hidden="true">サー・ハイアーズ</p>
+        <div class="spread-rule"></div>
+        <p class="spread-body">
+          The job hunt is an exercise in tedium. <em>Sir Hires</em> rewrites that narrative
+          with a privacy-first extension that extracts, organises, and enhances job data —
+          powered entirely by a local LLM. No servers. No surveillance. No compromise.
+        </p>
+        <blockquote class="pullquote">
+          &ldquo;No data ever leaves your device.&rdquo;
+        </blockquote>
+        <ul class="spread-stack">
+          <li>React</li><li>TypeScript</li><li>WXT</li><li>LM Studio</li>
+        </ul>
+        <a href="https://github.com/chriskevini/sir-hires" class="spread-link" target="_blank" rel="noopener">
+          View on GitHub &rarr;
+        </a>
+      </div>
+    </article>
+
+    <!-- Iterature -->
+    <article class="spread spread--flip reveal">
+      <div class="spread-fig">
+        <div class="spread-frame">
+          <div class="spread-art">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M20 80 L60 8 L100 80" stroke-dasharray="4 3"/>
+              <line x1="33" y1="57" x2="87" y2="57"/>
+              <circle cx="60" cy="40" r="5" fill="currentColor" opacity=".25"/>
+              <path d="M10 80 Q60 20 110 80" stroke-dasharray="2 4" opacity=".4"/>
+            </svg>
+          </div>
+          <span class="spread-figcaption">Fig.&thinsp;02 &mdash; Iterature</span>
+          <span class="spread-jp-label" aria-hidden="true">執筆</span>
+        </div>
+      </div>
+      <div class="spread-text">
+        <h3 class="spread-title">Iterature</h3>
+        <p class="spread-title-jp" aria-hidden="true">イテラチャー</p>
+        <div class="spread-rule"></div>
+        <p class="spread-body">
+          A writing coach that meets you where you are. <em>Iterature</em> adapts to your
+          rhythm — ten quiet minutes or a full half-hour of flow. AI-powered critique arrives
+          when you're ready, not before. For solo creators who want to improve without
+          judgement.
+        </p>
+        <blockquote class="pullquote">
+          &ldquo;Practice your craft in a low-pressure,<br>constructive environment.&rdquo;
+        </blockquote>
+        <ul class="spread-stack">
+          <li>Next.js</li><li>Firebase</li><li>OpenRouter</li><li>Tailwind CSS</li>
+        </ul>
+        <span class="spread-link spread-link--dim">In development — 開発中</span>
+      </div>
+    </article>
+
+    <!-- WordFractal -->
+    <article class="spread reveal">
+      <div class="spread-fig">
+        <div class="spread-frame">
+          <div class="spread-art">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="10" y="10" width="22" height="22"/>
+              <rect x="36" y="10" width="22" height="22"/>
+              <rect x="62" y="10" width="22" height="22"/>
+              <rect x="88" y="10" width="22" height="22"/>
+              <rect x="10" y="36" width="22" height="22"/>
+              <rect x="36" y="36" width="22" height="22" fill="currentColor" opacity=".1"/>
+              <rect x="62" y="36" width="22" height="22"/>
+              <rect x="88" y="36" width="22" height="22"/>
+              <rect x="10" y="62" width="22" height="22"/>
+              <rect x="36" y="62" width="22" height="22"/>
+              <rect x="62" y="62" width="22" height="22" fill="currentColor" opacity=".1"/>
+              <rect x="88" y="62" width="22" height="22"/>
+            </svg>
+          </div>
+          <span class="spread-figcaption">Fig.&thinsp;03 &mdash; WordFractal</span>
+          <span class="spread-jp-label" aria-hidden="true">対戦</span>
+        </div>
+      </div>
+      <div class="spread-text">
+        <h3 class="spread-title">WordFractal</h3>
+        <p class="spread-title-jp" aria-hidden="true">ワード・フラクタル</p>
+        <div class="spread-rule"></div>
+        <p class="spread-body">
+          Language as landscape. <em>WordFractal</em> drops players onto a shared letter grid
+          and asks them to build — together — chains of words that reach toward the horizon.
+          A race with vocabulary as fuel. Supports English and Japanese dictionaries.
+        </p>
+        <blockquote class="pullquote">
+          &ldquo;Collaboratively build chains of words<br>across an expansive grid.&rdquo;
+        </blockquote>
+        <ul class="spread-stack">
+          <li>React</li><li>Firebase</li><li>react-window</li><li>Vite</li>
+        </ul>
+        <a href="https://github.com/chriskevini/word-fractal" class="spread-link" target="_blank" rel="noopener">
+          View on GitHub &rarr;
+        </a>
+      </div>
+    </article>
+
+    <!-- NCHI Slider -->
+    <article class="spread spread--flip reveal">
+      <div class="spread-fig">
+        <div class="spread-frame">
+          <div class="spread-art">
+            <svg viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="1">
+              <rect x="15" y="12" width="30" height="30" rx="5"/>
+              <rect x="55" y="12" width="30" height="30" rx="5"/>
+              <rect x="15" y="52" width="30" height="30" rx="5"/>
+              <rect x="55" y="52" width="30" height="30" rx="5" fill="currentColor" opacity=".1"/>
+              <text x="30" y="33" font-size="16" font-family="serif" fill="currentColor" text-anchor="middle" stroke="none">ん</text>
+              <text x="70" y="33" font-size="16" font-family="serif" fill="currentColor" text-anchor="middle" stroke="none">ち</text>
+              <text x="30" y="73" font-size="16" font-family="serif" fill="currentColor" text-anchor="middle" stroke="none">お</text>
+              <text x="70" y="73" font-size="16" font-family="serif" fill="currentColor" text-anchor="middle" stroke="none" opacity=".5">?</text>
+            </svg>
+          </div>
+          <span class="spread-figcaption">Fig.&thinsp;04 &mdash; NCHI Slider</span>
+          <span class="spread-jp-label" aria-hidden="true">パズル</span>
+        </div>
+      </div>
+      <div class="spread-text">
+        <h3 class="spread-title">NCHI Slider</h3>
+        <p class="spread-title-jp" aria-hidden="true">んちスライダー</p>
+        <div class="spread-rule"></div>
+        <p class="spread-body">
+          The familiar mechanics of 2048, reimagined through Japanese wordplay. Slide
+          hiragana tiles, combine them into words, chase your name up the global
+          leaderboard. Deceptively simple. Quietly addictive. Fully bilingual in spirit.
+        </p>
+        <blockquote class="pullquote">
+          &ldquo;A playful collision of puzzle<br>mechanics and language.&rdquo;
+        </blockquote>
+        <ul class="spread-stack">
+          <li>React</li><li>TypeScript</li><li>Firebase</li><li>Vite</li>
+        </ul>
+        <a href="https://github.com/chriskevini/nchi-slider" class="spread-link" target="_blank" rel="noopener">
+          View on GitHub &rarr;
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-inner">
+      <div class="about-dropcap-wrap">
+        <span class="dropcap" aria-hidden="true">I</span>
+      </div>
+      <div class="about-text-col">
+        <h2 class="about-heading">About&ensp;<span class="about-heading-jp">／&ensp;自己紹介</span></h2>
+        <div class="about-rule"></div>
+        <p class="about-body">
+          build software at the intersection of language, utility, and play. My work
+          spans browser extensions that guard your data, real-time multiplayer games that
+          bridge cultures through words, and AI tools that adapt to the humans using them.
+        </p>
+        <p class="about-body">
+          In my free time, I snowboard, swim, speedcube, study languages and sing.
+        </p>
+        <p class="about-body about-body--italic">
+          I'm also really into flying drones but it doesn't fit the alliteration so I had to separate it.
+          ¯\_(ツ)_/¯
+        </p>
+        <!-- Japanese colophon strip -->
+        <div class="about-colophon" aria-hidden="true">
+          <span>ローカルファースト</span>
+          <span class="colophon-sep">・</span>
+          <span>プライバシー重視</span>
+          <span class="colophon-sep">・</span>
+          <span>言語と遊び</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <span class="contact-eyebrow">Contact&ensp;／&ensp;連絡先</span>
+        <h2 class="contact-heading">Let&rsquo;s Have a<br>Conversation</h2>
+        <p class="contact-jp" aria-hidden="true">ご連絡ください</p>
+      </div>
+      <div class="contact-right">
+        <a href="mailto:hello@chrisirineo.com" class="contact-row">
+          <span class="contact-row-label">Email</span>
+          <span class="contact-row-value">hello@chrisirineo.com</span>
+        </a>
+        <div class="contact-sep"></div>
+        <a href="https://github.com/chriskevini" class="contact-row" target="_blank" rel="noopener">
+          <span class="contact-row-label">GitHub</span>
+          <span class="contact-row-value">Connect &rarr;</span>
+        </a>
+        <div class="contact-sep"></div>
+        <a href="https://www.linkedin.com/in/chris-irineo/" class="contact-row" target="_blank" rel="noopener">
+          <span class="contact-row-label">LinkedIn</span>
+          <span class="contact-row-value">Connect &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="footer-left">Chris Irineo &copy; 2026</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
