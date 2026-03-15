@@ -22,6 +22,8 @@
 
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --screenshot-gap: 0.75rem;
 }
 
 /* Base */
@@ -101,7 +103,6 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--gutter);
-  padding-left: var(--gutter);
   height: 64px;
   /* Frosted glass */
   background: rgba(250, 248, 244, 0.82);
@@ -188,7 +189,6 @@ ul { list-style: none; }
   flex-direction: column;
   justify-content: center;
   padding: 8rem var(--gutter) 4rem;
-  padding-left: var(--gutter);
   position: relative;
   overflow: hidden;
 }
@@ -390,7 +390,6 @@ ul { list-style: none; }
   max-width: var(--max);
   margin: 0 auto 5rem;
   padding: 0 var(--gutter);
-  padding-left: var(--gutter);
 }
 .work-header-rule { flex: 1; height: 1px; background: var(--ink-faint); }
 .work-header-title {
@@ -424,65 +423,45 @@ ul { list-style: none; }
 .spread:nth-child(odd) {
   background: var(--cream-dark);
   padding: 2rem var(--gutter);
-  padding-left: var(--gutter);
   margin-bottom: 5rem;
 }
 .spread:nth-child(even) {
   background: var(--cream);
   padding: 2rem var(--gutter);
-  padding-left: var(--gutter);
   margin-bottom: 5rem;
 }
 
-.spread-frame {
-  position: relative;
-  aspect-ratio: 4/3;
-  border: 1px solid var(--ink-faint);
-  background: var(--cream-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: border-color 0.3s;
-}
-.spread:hover .spread-frame { border-color: var(--ink-mid); }
-.spread-frame::before {
-  content: '';
-  position: absolute;
-  inset: 6px;
-  border: 1px dashed var(--ink-faint);
-  pointer-events: none;
-  transition: border-color 0.3s;
-}
-.spread:hover .spread-frame::before { border-color: var(--vermillion); opacity: 0.5; }
-
-/* Screenshot grid layout */
+/* Screenshot grid layout — desktop baseline (>900px) */
 .spread-screenshots {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: var(--screenshot-gap);
   width: 100%;
-  aspect-ratio: 1;
+  max-height: 60vh;
+  max-width: min(50vw, 60vh);
 }
+/* Single screenshot: full width, no forced square */
 .spread-screenshots--single {
   grid-template-columns: 1fr;
-  align-content: center;
-  justify-items: center;
-  aspect-ratio: unset;
-}
-.spread-screenshots--single .spread-screenshot {
-  max-width: 100%;
-  max-height: 100%;
+  max-height: unset;
 }
 .spread-screenshot {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   border-radius: 4px;
 }
+/* WordFractal: main image spans both rows, secondary stacks beside it */
 .spread-screenshot--main {
   grid-column: 1;
   grid-row: 1 / 3;
+}
+.spread-screenshots-secondary {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: var(--screenshot-gap);
 }
 
 .spread-fig {
@@ -491,37 +470,6 @@ ul { list-style: none; }
   justify-content: center;
   width: 100%;
 }
-.spread-screenshot-single {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 4px;
-}
-.spread-screenshots-secondary {
-  grid-column: 2;
-  grid-row: 1 / 3;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-
-/* Japanese category label — top left of frame */
-.spread-jp-label {
-  position: absolute;
-  top: 0.6rem;
-  left: 0.7rem;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--vermillion);
-  opacity: 0.18;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  transition: opacity 0.3s;
-}
-.spread:hover .spread-jp-label { opacity: 0.45; }
-
 
 .spread-title {
   font-family: var(--font-display);
@@ -604,7 +552,6 @@ ul { list-style: none; }
 .about {
   background: var(--ink);
   padding: 6rem var(--gutter);
-  padding-left: var(--gutter);
   position: relative;
   overflow: hidden;
 }
@@ -718,7 +665,6 @@ ul { list-style: none; }
 /* ── Contact ── */
 .contact {
   padding: 6rem var(--gutter);
-  padding-left: var(--gutter);
   background: var(--cream-dark);
   position: relative;
   overflow: hidden;
@@ -803,7 +749,6 @@ ul { list-style: none; }
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem var(--gutter);
-  padding-left: var(--gutter);
   border-top: 1px solid var(--ink-faint);
   font-size: 0.7rem;
   letter-spacing: 0.05em;
@@ -841,20 +786,27 @@ ul { list-style: none; }
     margin-bottom: 4rem;
   }
   
-  /* Stack screenshots vertically on tablet */
+  /* Screenshots: stacked above text, still 2-col side-by-side */
   .spread-screenshots {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    aspect-ratio: unset;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--screenshot-gap);
+    max-height: 60vh;
+    max-width: min(50vw, 60vh);
   }
+  /* Single screenshot: full width, no forced square */
+  .spread-screenshots--single {
+    grid-template-columns: 1fr;
+    max-height: unset;
+  }
+  /* Reset WordFractal row-spanning — no longer needed in single column */
   .spread-screenshot--main {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: auto;
   }
   .spread-screenshots-secondary {
-    grid-column: 1;
-    grid-row: 2;
-    flex-direction: row;
+    grid-column: 2;
+    grid-row: auto;
+    flex-direction: column;
   }
   
   .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -906,29 +858,14 @@ ul { list-style: none; }
   .spread-title { font-size: 2rem; }
   .nav-link { font-size: 0.85rem; }
   .hero-kana-name { font-size: 1rem; }
-   
-   /* Display screenshots 2 columns side-by-side on mobile */
-   .spread-screenshots {
-     grid-template-columns: 1fr 1fr;
-     grid-template-rows: auto;
-     gap: 0.5rem;
-     aspect-ratio: 1;
-   }
-   .spread-screenshot--main {
-     grid-column: 1;
-     grid-row: 1;
-   }
-   .spread-screenshots-secondary {
-     grid-column: 2;
-     grid-row: 1;
-     flex-direction: column;
-   }
-   
-   /* Keep single screenshots full width on mobile */
-   .spread-screenshots--single {
-     grid-template-columns: 1fr;
-     aspect-ratio: unset;
-   }
+
+  /* Mobile: screenshots take full width, no max-width constraint */
+  .spread-screenshots {
+    max-width: unset;
+    max-height: 70vh;
+  }
+  /* Tighten screenshot gap on small screens */
+  .spread-screenshots { gap: 0.5rem; }
 }
 
 /* ── Reduced motion ── */
