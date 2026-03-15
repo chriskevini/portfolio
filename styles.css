@@ -463,8 +463,6 @@ ul { list-style: none; }
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
   width: 100%;
-  height: 100%;
-  padding: 1rem;
 }
 .spread-screenshots--single {
   grid-template-columns: 1fr;
@@ -484,6 +482,13 @@ ul { list-style: none; }
 .spread-screenshot--main {
   grid-column: 1;
   grid-row: 1 / 3;
+}
+
+.spread-fig {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .spread-screenshot-single {
   width: 100%;
@@ -676,6 +681,21 @@ ul { list-style: none; }
   color: var(--cream-dark);
   margin-bottom: 1.25rem;
 }
+
+/* First paragraph styled I on mobile (when dropcap is hidden) */
+.about-body:first-of-type::before {
+  content: 'I ';
+  display: none;
+}
+@media (max-width: 900px) {
+  .about-body:first-of-type::before {
+    display: inline;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
 .about-body--italic { font-style: italic; color: var(--ink-faint); }
 
 /* Colophon strip */
