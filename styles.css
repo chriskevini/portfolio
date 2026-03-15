@@ -379,7 +379,11 @@ ul { list-style: none; }
 .scroll-dot { animation: scrollBob 2s ease-in-out 2s infinite; }
 
 /* ── Work ── */
-.work { padding: 0 0 6rem; }
+.work {
+  padding: 0 0 6rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
 
 .work-header {
   display: flex;
@@ -483,15 +487,6 @@ ul { list-style: none; }
   gap: 0.75rem;
 }
 
-.spread-figcaption {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.75rem;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  color: var(--ink-light);
-  font-style: italic;
-}
 
 /* Japanese category label — top left of frame */
 .spread-jp-label {
