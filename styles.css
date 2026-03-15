@@ -462,11 +462,13 @@ ul { list-style: none; }
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
   width: 100%;
+  aspect-ratio: 1;
 }
 .spread-screenshots--single {
   grid-template-columns: 1fr;
   align-content: center;
   justify-items: center;
+  aspect-ratio: unset;
 }
 .spread-screenshots--single .spread-screenshot {
   max-width: 100%;
@@ -843,6 +845,7 @@ ul { list-style: none; }
   .spread-screenshots {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    aspect-ratio: unset;
   }
   .spread-screenshot--main {
     grid-column: 1;
