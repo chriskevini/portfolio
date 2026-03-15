@@ -380,9 +380,7 @@ ul { list-style: none; }
 
 /* ── Work ── */
 .work {
-  padding: 0 0 6rem;
-  max-width: var(--max);
-  margin: 0 auto;
+  padding: 0;
 }
 
 .work-header {
@@ -422,6 +420,20 @@ ul { list-style: none; }
 .spread.visible { opacity: 1; transform: none; }
 .spread--flip { direction: rtl; }
 .spread--flip > * { direction: ltr; }
+
+/* Alternate background colors for visual separation */
+.spread:nth-child(odd) {
+  background: var(--cream-dark);
+  padding: 2rem var(--gutter);
+  padding-left: calc(var(--gutter) + 2.5rem);
+  margin-bottom: 5rem;
+}
+.spread:nth-child(even) {
+  background: var(--cream);
+  padding: 2rem var(--gutter);
+  padding-left: calc(var(--gutter) + 2.5rem);
+  margin-bottom: 5rem;
+}
 
 .spread-frame {
   position: relative;
