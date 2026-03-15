@@ -101,7 +101,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   height: 64px;
   /* Frosted glass */
   background: rgba(250, 248, 244, 0.82);
@@ -188,7 +188,7 @@ ul { list-style: none; }
   flex-direction: column;
   justify-content: center;
   padding: 8rem var(--gutter) 4rem;
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   position: relative;
   overflow: hidden;
 }
@@ -390,7 +390,7 @@ ul { list-style: none; }
   max-width: var(--max);
   margin: 0 auto 5rem;
   padding: 0 var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
 }
 .work-header-rule { flex: 1; height: 1px; background: var(--ink-faint); }
 .work-header-title {
@@ -412,7 +412,6 @@ ul { list-style: none; }
   max-width: var(--max);
   margin: 0 auto 7rem;
   padding: 0 var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
@@ -425,13 +424,13 @@ ul { list-style: none; }
 .spread:nth-child(odd) {
   background: var(--cream-dark);
   padding: 2rem var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   margin-bottom: 5rem;
 }
 .spread:nth-child(even) {
   background: var(--cream);
   padding: 2rem var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   margin-bottom: 5rem;
 }
 
@@ -603,7 +602,7 @@ ul { list-style: none; }
 .about {
   background: var(--ink);
   padding: 6rem var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   position: relative;
   overflow: hidden;
 }
@@ -682,7 +681,7 @@ ul { list-style: none; }
   margin-bottom: 1.25rem;
 }
 
-/* First paragraph styled I on mobile (when dropcap is hidden) */
+/* First paragraph plain I on mobile (when dropcap is hidden) */
 .about-body:first-of-type::before {
   content: 'I ';
   display: none;
@@ -690,9 +689,6 @@ ul { list-style: none; }
 @media (max-width: 900px) {
   .about-body:first-of-type::before {
     display: inline;
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 700;
   }
 }
 
@@ -720,7 +716,7 @@ ul { list-style: none; }
 /* ── Contact ── */
 .contact {
   padding: 6rem var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   background: var(--cream-dark);
   position: relative;
   overflow: hidden;
@@ -805,7 +801,7 @@ ul { list-style: none; }
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem var(--gutter);
-  padding-left: calc(var(--gutter) + 2.5rem);
+  padding-left: var(--gutter);
   border-top: 1px solid var(--ink-faint);
   font-size: 0.7rem;
   letter-spacing: 0.05em;
