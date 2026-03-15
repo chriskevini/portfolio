@@ -460,6 +460,12 @@ ul { list-style: none; }
   grid-column: 1;
   grid-row: 1 / 3;
 }
+.spread-screenshot-single {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
 .spread-screenshots-secondary {
   grid-column: 2;
   grid-row: 1 / 3;
